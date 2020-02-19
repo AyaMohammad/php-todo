@@ -1,7 +1,6 @@
-
-<?php
-    include 'header.php';
-?>
+<!-- <?php
+//    include 'header.php';
+// ?>
 
 <h2>HTML Forms</h2>
 
@@ -14,3 +13,4 @@
 <p>If you click the "Submit" button, the form-data will be sent to a page called "/action_page.php".</p>
 
 
+ -->

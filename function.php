@@ -33,12 +33,8 @@ function GetCheck($id,$conn){
     $result = $query->fetch();
     return $result;
 }
-function DeleteCheck($id,$conn){
-    $query = $con->prepare('DELETE * FROM todo Where id=:id');
-    $query->execute([':id'=>$id]);
-    $result = $query->fetch();
-    return $result;
-}
+
+
 ?>
 </body>
 </html>

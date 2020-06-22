@@ -14,7 +14,8 @@
 </head>
 <nav class="navbar navbar-expand-lg navbar-light" style="background-color:aliceblue ;">
 	<ul class="">
-		<li class="nav-li"><a class="navbar-brand"  href="index.php">home</a></li>
-		<li class="nav-li"><a class="navbar-brand"  href="create.php">create</a></li>
+		<li class="nav-li"><a class="navbar-brand"  href="index.php">Home</a></li>
+		<li class="nav-li"><a class="navbar-brand"  href="create_task.php">Create Task</a></li>
+		<li class="nav-li"><a class="navbar-brand"  href="create_list.php">Create List</a></li>
 	</ul>
 </nav>

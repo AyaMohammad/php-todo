@@ -1,26 +1,39 @@
-<?php include "header.php";?>
-<?php require "function.php";?>
+<?php 
+    include "header.php";
+    require "function.php";
+?>
 
-<Div class="container">
-    <h2>Content</h2>
+<div class="container">
     <?php
-    $result = GetAllCheck();
-    foreach($result as $results){      
+    $lists = getAllLists();
+
+foreach($lists as $list) {
     ?>
-    <div id="container-fluid" class="homepage-container" style="background-color:crimson; padding:50px ;">
-        <div class="left">
-            <h2 class="title"><?php echo $results['Name']; ?></h2><i class="fas fa-user"></i>
-            <p class="text"><?php echo $results['Description']; ?></p>
-            <p class="status" ><?php echo $results['Status']?></p>
-        </div>
-        <div class="right">
-            <p class="time"><?php echo $results['Time'];?></p>
-            <a class="button-index" href="edit.php?ID=<?php echo $results['ID'];?>">Edit<i class="fas fa-pencil-alt"></i></a>
-            <a class="button-index-del" href="delete.php?ID=<?php echo $results['ID'];?>">Delete<i class="fas fa-trash-alt"></i></a>
-        </div>
-    </div>
-    <?php 
+    <div class="list">
+        <h2 class="h3 text-white"><?php echo $list['list_name']?></h2>
+        <a href="delete_list.php?id=<?php echo $list['list_id'];?>" class="btn btn-danger mb-2">Delete list</a>
+        <a href="edit_list.php?id=<?php echo $list['list_id'];?>" class="btn btn-success mb-2">Edit list</a>
+
+    <?php
+        $tasks = getTasksByListId($list['list_id']);
+        foreach($tasks as $task) {
+    ?>
+            <div id="container-fluid" class="homepage-container px-5 py-4" style="background-color:crimson;">
+                <div class="left">
+                    <h2 class="title h5"><?php echo $task['task_description']; ?></h2>
+                    <span class="badge badge-light mr-2"><?php echo $task['task_duration'];?> minuten</span>
+                    <small class="mb-0 text-white"><i class="fas fa-clipboard-list"></i> <?php echo $task['status_name']; ?></small>
+                </div>
+                <div class="right">
+                    <a class="button-index mr-2" href="edit_task.php?id=<?php echo $task['task_id'];?>"><i class="fas fa-pencil-alt"></i> edit</a>
+                    <a class="button-index-del" href="delete_task.php?id=<?php echo $task['task_id'];?>"><i class="fas fa-trash-alt"></i> delete</a>
+                </div>
+            </div>
+    <?php
+        }
+        echo "</div>";
     }
-    ?>
-</Div>
-<?php include "footer.php";?>
+
+    echo "</div>";
+
+    include "footer.php";

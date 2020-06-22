@@ -1,0 +1,103 @@
+.footer-container{
+    width: 100%;
+    background-color: grey;
+
+}
+a{
+    text-decoration: none;
+    color: white;
+    display: inline-block;
+}
+.title{
+    color: white;
+}
+.title-delete{
+    color:black ;
+    display: inline-block;
+}
+.text{
+    color: white; 
+}
+.nav-li{
+    display:inline-block;
+}
+.left , .right{
+    display: inline-block;
+    height: 100%;
+}
+.right{
+    float: right;
+}
+.right-delete{
+    padding-top: 5%;
+    float: right;
+}
+.homepage-container{
+    border-bottom: #B50000 1px solid;
+}
+#container-edit {
+    margin: 0 auto;
+    background-color: #f30672;
+    width: 80%;
+}
+#container-Delete{
+    background-color: #eae321;
+    margin: 0 auto;
+    width: 80%;
+    padding: 5%;
+}
+#container-Delete text{
+    color: black;
+}
+#edit-form{
+    padding:10% 10% 10% 10%;
+    width: 100%;
+}
+.title{
+    display: inline-block;
+    margin-right: 10px;
+}
+/*.button-index{*/
+/*    display: inline-block;*/
+/*}*/
+/*.button-index-del{*/
+/*    display: inline-block;*/
+/*}*/
+/*.status{*/
+/*    display: inline-block;*/
+/*}*/
+li{
+    display: inline-block;
+}
+.list{
+    width: 100%;
+    padding: 5% 2.5% 5% 2.5%;
+    margin-bottom: 2.5%;
+    background-color: #419ba7;
+}
+.list p {
+    font-size: 20px;
+}
+.form-create{
+    margin: 0 7.5% 0% 7.5%;
+    padding: 10% 10% 10% 10%;
+    background-color: #4DA6FF;
+}
+/*.form-control{
+    width: 20%;
+    display: inline-block;
+}*/
+.form-list-control{
+    width: 100%;
+    display: inline-block;
+}
+.homepage-container .time{
+    background-color: #fff;
+    border-radius: 4px;
+    padding: 5% 25% 0 25%;
+    height: 40px;
+    font-size: 20px;
+}
+.inline-block-box{
+    display: inline-block;
+}
